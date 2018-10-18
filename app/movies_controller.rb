@@ -66,7 +66,9 @@ def can_find_using_where_clause_and_be_sorted
   # For this test return all movies released after 2002 and ordered by
   # release date descending
 
-  sql = <<-
+  sql = "SELECT * FROM movies WHERE release_date > 1999 ORDER BY release_date DSC"
+  DB[:conn].execute(sql)
+
   __
 end
 
